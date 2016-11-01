@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE struts-config PUBLIC 
-"-//Apache Software Foundation//DTD Struts Configuration 1.3//EN" 
+<!DOCTYPE struts-config PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
 "http://jakarta.apache.org/struts/dtds/struts-config_1_3.dtd">
 
 <struts-config>
 
 	<form-beans>
-		<form-bean name="helloWorldForm" 
+		<form-bean name="helloWorldForm"
 			type="com.mkyong.common.form.HelloWorldForm"/>
 	</form-beans>
 
 	<action-mappings>
+		<action path="/Welcome" forward="/jsp/HelloWorld.jsp"/>
 		<action path="/helloWorld"
 			type="com.mkyong.common.action.HelloWorldAction"
 			name="helloWorldForm">
-			<forward name="success" path="/HelloWorld.jsp"/>
-			
+			<!-- <forward name="success" path="/WEB-INF/jsp/HelloWorld.jsp" /> -->
+			<forward name="success" path="/HelloWorld" redirect="true" />
 		</action>
 	</action-mappings>
 
