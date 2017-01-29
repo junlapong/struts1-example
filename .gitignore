@@ -23,7 +23,7 @@ build/
 gradle/
 .gradle/
 
-screenshots/*
+screenshots/
 logs/
 target/
 *.p12

@@ -3,7 +3,7 @@
  "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
 <web-app>
-    <display-name>Maven Struts Examples</display-name>
+    <display-name>Struts 1 Examples Web App</display-name>
 
     <filter>
         <filter-name>UrlRewriteFilter</filter-name>
@@ -37,6 +37,7 @@
             <url-pattern>*.jsp</url-pattern>
         </web-resource-collection>
         <auth-constraint/>
-    </security-constraint> -->
+    </security-constraint>
+-->
 
 </web-app>

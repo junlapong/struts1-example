@@ -7,16 +7,21 @@
 
 	<form-beans>
 		<form-bean name="helloWorldForm"
-			type="com.mkyong.common.form.HelloWorldForm"/>
+				   type="app.form.HelloWorldForm"/>
 	</form-beans>
 
 	<action-mappings>
-		<action path="/Welcome" forward="/jsp/HelloWorld.jsp"/>
-		<action path="/helloWorld"
-			type="com.mkyong.common.action.HelloWorldAction"
-			name="helloWorldForm">
-			<!-- <forward name="success" path="/WEB-INF/jsp/HelloWorld.jsp" /> -->
-			<forward name="success" path="/HelloWorld" redirect="true" />
+		<!-- /Welcome.do -->
+		<action path="/Welcome" forward="/jsp/Welcome.jsp"/>
+		
+		<!-- /Hello.do -->
+		<action path="/Hello"
+			    type="app.action.HelloWorldAction"
+			    name="helloWorldForm"> <!-- form -->
+
+			<!-- /WEB-INF/jsp/HelloWorld.jsp" -->
+			<forward name="view" path="/HelloWorld" redirect="true" />
+			
 		</action>
 	</action-mappings>
 
